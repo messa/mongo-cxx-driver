@@ -13,6 +13,7 @@
 // limitations under the License.
 
 #include <mongocxx/exception/error_code.hpp>
+#include <string>
 
 #include <mongocxx/config/private/prelude.hpp>
 
