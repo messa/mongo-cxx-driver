@@ -26,6 +26,7 @@ namespace options {
 #if defined(MONGOC_HAVE_SSL)
 inline ::mongoc_ssl_opt_t make_ssl_opts(const ssl& ssl_opts) {
     ::mongoc_ssl_opt_t out;
+    memset(&out, 0, sizeof(out));
     if (ssl_opts.pem_file()) {
         out.pem_file = ssl_opts.pem_file()->terminated().data();
     }
